@@ -1,0 +1,59 @@
+{% extends "Layout.html" %}
+
+{% block body%}
+
+
+    <form class="signup-form" action="/plogin" method="post">
+
+      <!-- form header -->
+      <div class="form-header"> 
+        <h1>Doctor Login</h1>
+      </div>
+
+      <!-- form body -->
+      <div class="form-body">
+
+        <!-- Firstname and Lastname -->
+        <div>
+          <div class="form-group .horizontal-group .left">
+            <label for="username" class="label-title">User name *</label>
+            <input type="text" id="firstname" class="form-input" placeholder="Enter username" required="required" />
+          </div>
+        
+        </div>
+
+        <!-- Email -->
+       <div >
+          <div class="form-group">
+            <label for="password" class="label-title">Password *</label>
+            <input type="password" id="password" class="form-input" placeholder="Enter your password" required="required">
+          </div>
+        </div>     
+  </div>
+
+        
+
+      <!-- form-footer -->
+      <div class="form-footer">
+        
+        <button type="submit" class="btn">Login</button>
+
+
+         <button type="submit" class="signup">SignUp</button>
+         <span>* New User SignUp here    </span>
+      </div>
+
+    </form>
+
+    <!-- Script for range input label 
+    <script>
+      var rangeLabel = document.getElementById("range-label");
+      var experience = document.getElementById("experience");
+
+      function change() {
+      rangeLabel.innerText = experience.value + "K";
+      }
+    </script>-->
+
+    {% endblock %}
+

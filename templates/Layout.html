@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Header & Footer</title>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='first.css') }}">
+  	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='patlogin.css') }}">
+  	  	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='patientreg.css') }}">
+</head>
+<body>
+<div class="header">
+  <a href="#default" class="logo">CompanyLogo</a>
+  <div class="header-right">
+    <a class="active" href="Home.html">Home</a>
+	<a href="About.html">About</a>
+	<a href="Gallery.html">Gallery</a>
+	<a href="Diagnostics.html">Diagnostics</a>
+	<a href={{url_for('Pharmacy')}}>Pharmacy</a>
+	<a href={{url_for('Login')}}>Login</a>
+	<a href={{url_for('SignUp')}}>SignUp</a>
+  </div>
+</div>
+
+ {% block body %}{% endblock %}
+
+<footer>
+<div class="footer">
+ 	<table width="100%">
+ 		<tr>
+ 			<th>Company Logo</th>
+ 			<th>For Patients</th>
+ 			<th>For Doctors</th>
+ 			<th>Social</th>
+ 		</tr>
+ 		<tr>
+ 			<td>About</td>
+ 			<td>Search for doctors</td>
+ 			<td>Profile</td>
+ 			<td>Facebook</td>
+ 		</tr>
+ 		<tr>
+ 			<td>Blog</td>
+ 			<td>Search for Hospitals</td>
+ 			<td>Register</td>
+ 			<td>Instagram</td>
+ 		</tr>
+ 		<tr>
+ 			<td>Careers</td>
+ 			<td>Schedule an Appointment</td>
+ 			<td>Achievements</td>
+ 			<td>LinkedIn</td>
+ 		</tr>
+ 		<tr>
+ 			<td>Contact Us</td>
+ 			<td>Diagnostic Tests</td>
+ 			<td>Check Schedule</td>
+ 			<td>Twitter</td>
+ 		</tr>
+ 	</table>
+ 	<h3 align="center">&copy; Copyright Reserved.</h2>
+ </div>
+</footer>
+</body>
+</html>

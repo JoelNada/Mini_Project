@@ -1,0 +1,173 @@
+{% extends "Layout.html" %}
+
+{% block body%}
+
+
+    <form class="signup-form" action="/register" method="post">
+
+      <!-- form header -->
+      <div class="form-header">
+        <center style="padding-top:20px;">
+          <image  src="{{url_for('static', filename='images/doctor.png')}}" alt="pvp" style= "width:150px;height:150px;">
+        </center>
+        <h1>New Doctor Registration</h1>
+      </div>
+
+      <!-- form body -->
+      <div class="form-body">
+
+        <!-- Firstname and Lastname -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="firstname" class="label-title">First name *</label>
+            <input type="text" id="firstname" class="form-input" placeholder="Enter your first name" required="required" />
+          </div>
+          <div class="form-group right">
+            <label for="lastname" class="label-title">Last name*</label>
+            <input type="text" id="lastname" class="form-input" placeholder="Enter your last name" />
+          </div>
+        </div>
+
+        <!-- Email -->
+       
+        <div class="form-group">
+          <label for="email" class="label-title">Email*</label>
+          <input type="email" id="email" class="form-input" placeholder="Enter your email" required="required">
+      </div>
+      
+      
+
+        <!-- Passwrod and confirm password -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label for="password" class="label-title">Password *</label>
+            <input type="password" id="password" class="form-input" placeholder="Enter your password" required="required">
+          </div>
+          <div class="form-group right">
+            <label for="confirm-password" class="label-title">Confirm Password *</label>
+            <input type="password" class="form-input" id="confirm-password" placeholder="Enter your password again" required="required">
+          </div>
+        </div>
+
+        <!-- Gender and Hobbies -->
+        
+
+        <!-- Source of Income and Income -->
+        <div class="horizontal-group">
+        	<div class="form-group left">
+            <label for="experience" class="label-title">Age*</label>
+            <input placeholder="Enter your age" type="number"class="form-input">
+          </div>
+          <div class="form-group right" >
+            <label class="label-title">Phone Number*</label>
+            <input type="number" class="form-input" id="Phone Number" placeholder="Enter your Phone Number" required="required">
+            
+          </div>
+        </div>
+
+        <!-- Profile picture and Age -->
+        <div class="horizontal-group">
+          <div class="form-group left">
+            <label class="label-title">Gender*</label>
+            <div >
+             <select class="form-input">
+			     <option value="0" selected disabled>Gender</option>
+			     <option value="1">Female</option>
+			     <option value="2">Male</option>
+			     <option value="3">Others</option>
+			</select>
+            </div>
+          </div>
+          <div class="form-group right">
+          <label class="label-title">Experiance*</label>
+          <input type="text"  class="form-input" placeholder="Enter your Experiance Years" required="required">
+      </div>
+          
+        </div>
+        <div class="horizontal-group" >
+        	<div class="form-group left">
+            <label for="choose-file" class="label-title">Upload Profile Picture*</label>
+            <input class="form-input" type="file" id="choose-file" size="80">
+          </div>
+          <div class="form-group right" >
+            <label for="choose-file" class="label-title">Upload  Medical Certificate*</label>
+            <input class="form-input" type="file" id="choose-file" size="80">
+          </div>
+      </div>
+
+        <!-- Bio -->
+        <div class="form-group">
+          <label for="choose-file" class="label-title">Address</label>
+          <textarea placeholder="Enter your address" class="form-input" rows="4" cols="50" style="height:auto"></textarea>
+        </div>
+      <div class="horizontal-group">
+          <div class="form-group left">
+            <label class="label-title">City*</label>
+            <div >
+             <select class="form-input">
+			              <option value="0" selected disabled>City</option>
+			              <option value="1">Vijayawada</option>
+			              <option value="2">Guntur</option>
+			              <option value="3">Vizag</option>
+			              <option value="4">Kurnool</option>
+			              <option value="5">Tirupati</option>
+			  </select>
+            </div>
+          </div>
+          <div class="form-group right" >
+          	<label class="label-title">State*</label>
+          	<div>
+            <select class="form-input">
+			              <option value="0" selected disabled>State</option>
+			              <option value="1">Andhra Pradesh</option>
+			              <option value="2">Others</option>
+
+			  </select>
+          </div>
+      	</div>
+      </div>
+      <div>
+      	<div class="abc">
+	          <label class="label-title">District*</label>
+	          <input type="text"  class="form-input" placeholder="Enter your District" required="required">
+      </div>
+      	<div class="abc">
+	          <label class="label-title">Pincode*</label>
+	          <input type="text"  class="form-input" placeholder="Enter your Pincode" required="required">
+      </div>
+      	<div class="abc" >
+          	<label class="label-title">Country*</label>
+          	<div>
+            <select class="form-input">
+			              <option value="0" selected disabled>Country</option>
+			              <option value="1">India</option>
+			              <option value="2">Others</option>
+
+			  </select>
+          </div>
+      	</div>
+      	</div>	
+      </div>
+  </div>
+
+        
+
+      <!-- form-footer -->
+      <div class="form-footer">
+        <span>* required</span>
+        <button type="submit" class="btn">Create</button>
+      </div>
+
+    </form>
+
+    <!-- Script for range input label
+    <script>
+      var rangeLabel = document.getElementById("range-label");
+      var experience = document.getElementById("experience");
+
+      function change() {
+      rangeLabel.innerText = experience.value + "K";
+      }
+    </script>-->
+{% endblock %}
+
