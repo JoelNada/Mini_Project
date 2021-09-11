@@ -1,0 +1,198 @@
+/*---------------------------------------*/
+/* Font */
+/*---------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+/*---------------------------------------*/
+/* Register Form */
+/*---------------------------------------*/
+body {
+  /*background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
+  /*background: linear-gradient(to top, #f1f6f3, #e3f2f2, #daedf7, #dee4f9, #ecd9f0);*/
+  /*background: -moz-linear-gradient(left center, transparent) repeat scroll 0 0 transparent;*/
+
+  background-size: 400% 400%;
+  /*animation: gradient 15s ease infinite;*/
+  background:#d9ffff;
+  
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.signup-form {
+  font-family: sans-serif;
+  width:650px;
+  margin:30px auto;
+  margin-top: 100px;
+  background:linear-gradient(to right, #ffffff 0%, #fafafa 50%, #ffffff 99%);
+  border-radius: 10px;
+}
+
+/*---------------------------------------*/
+/* Form Header */
+/*---------------------------------------*/
+.form-header  {
+  background:#59cfc6;
+  /*linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
+  /*background:rgb(181, 255, 128)*/
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+
+}
+
+.form-header h1 {
+  font-size: 30px;
+  text-align:center;
+  color:#000066;
+  padding:20px 0;
+  border-bottom:1px solid #cccccc;
+}
+
+/*---------------------------------------*/
+/* Form Body */
+/*---------------------------------------*/
+.form-body {
+  padding:10px 40px;
+  color:#666;
+  
+}
+
+.form-body .label-title {
+  color:#000066;
+  font-size: 17px;
+  font-weight: bold;
+}
+.pint{
+  width: 30px;
+  padding-left:35%;
+  color:#000066;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.form-body .form-input {
+    font-size: 17px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 34px;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: left;
+    border: 2px solid #d6d6d6;
+    border-radius: 4px;
+    background: white;
+    outline: none;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+
+
+.horizontal-group .left{
+  float:left;
+  width:49%;
+}
+
+.horizontal-group .right{
+  float:right;
+  width:49%;
+}
+.abc{
+  display:inline-block;
+  width:32%;
+  padding:2px;
+}
+.pakka{
+  display:inline-block;
+  margin-bottom:20px;
+    margin-top:20px;
+  width:49%;
+}
+
+input[type="file"] {
+  
+}
+
+#range-label {
+  width:15%;
+  padding:5px;
+  background-color:#ffffff;
+  color:white;
+  border-radius: 5px;
+  font-size: 17px;
+  position: relative;
+  top:-8px;
+}
+
+
+::-webkit-input-placeholder  {
+  color:#d9d9d9;
+}
+.mid
+{
+  padding-left:25%;
+  padding-top:10px;
+  width:65%;
+}
+
+/*---------------------------------------*/
+/* Form Footer */
+/*---------------------------------------*/
+.signup-form .form-footer  {
+  background: #59cfc6;
+  /*linear-gradient(45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);*/
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding:10px 40px;
+  text-align: right;
+  border-top: 1px solid #cccccc;
+  clear:both;
+}
+
+.form-footer span {
+  float:left;
+  margin-top: 10px;
+  color:#000066;  
+  font-style: italic;
+  font-weight: thin;
+  padding-right: 10px
+}
+
+.btn {
+   display:inline-block;
+   padding:10px 20px;
+   background-color: white;
+   font-size:17px;
+   border:none;
+   border-radius:5px;
+   color:#000066;
+   cursor:pointer;
+}
+.signup
+{ float:right;
+  display:inline-block;
+   padding:10px 20px;
+   background-color: #a60059;
+   font-size:17px;
+   border:none;
+   border-radius:5px;
+   color:#ffffff;
+   cursor:pointer;}
+.btn:hover {
+  background-color:#DCD ;
+  color:black; ;
+}
+.signup:hover {
+  background-color:#DCD ;
+  color:black;
+}
