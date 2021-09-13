@@ -6,6 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/first.css') }}">
   	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/patlogin.css') }}">
   	  	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/patientreg.css') }}">
+  	  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/or.css') }}">
+  	   <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/orup.css') }}">
+
 </head>
 <body>
 <div class="header">
@@ -16,13 +19,24 @@
 	<a href="Gallery.html">Gallery</a>
 	<a href="Diagnostics.html">Diagnostics</a>
 	<a href={{url_for('Pharmacy')}}>Pharmacy</a>
-	<a href={{url_for('Login')}}>Login</a>
-	<a href={{url_for('SignUp')}}>SignUp</a>
+  <div class="dropdown">
+	<button onclick="myFunction()" class="dropbtn">Login</button>
+  <div id="myDropdown" class="dropdown-content">
+	<a href={{url_for('DoctorLogin')}}>Doctor Login</a>
+	<a href={{url_for('PatientLogin')}}>Patient login</a>
+  </div>
+</div>
+  <div class="dropdown1">
+  <button onclick="myFunctions()" class="dropbtn1">SignUp</button>
+  <div id="myDropdown1" class="dropdown-content1">
+	<a href={{url_for('docregister')}}>Doctor SignUp</a>
+	<a href={{url_for('PatientRegister')}}>Patient SignUp</a>
+  </div>
+</div>
   </div>
 </div>
 
  {% block body %}{% endblock %}
-
 <footer>
 <div class="footer">
  	<table width="100%">
@@ -60,5 +74,43 @@
  	<h3 align="center">&copy; Copyright Reserved.</h2>
  </div>
 </footer>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+function myFunctions() {
+  document.getElementById("myDropdown1").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn1')) {
+    var dropdowns1 = document.getElementsByClassName("dropdown-content1");
+    var i;
+    for (i = 0; i < dropdowns1.length; i++) {
+      var openDropdown1 = dropdowns1[i];
+      if (openDropdown1.classList.contains('show')) {
+        openDropdown1.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
 </body>
 </html>
